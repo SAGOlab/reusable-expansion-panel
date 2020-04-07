@@ -1,0 +1,16 @@
+<mat-accordion [hideToggle]="config.data.hideToggle" [multi]="config.data.multi">
+  <mat-expansion-panel [disabled]="config.data.isDisabled">
+    <mat-expansion-panel-header>
+      <mat-panel-title>
+        {{config.data.title}}
+      </mat-panel-title>
+      <mat-panel-description>
+        {{config.data.description}}
+      </mat-panel-description>
+    </mat-expansion-panel-header>
+    <ng-template appComponentLoader matExpansionPanelContent></ng-template>
+    <mat-action-row *ngIf="config.data.cta">
+      <button mat-button>Click me</button>
+    </mat-action-row>
+  </mat-expansion-panel>
+</mat-accordion>
