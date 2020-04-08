@@ -40,11 +40,13 @@ export class AccordionComponent implements AfterViewInit, OnDestroy {
 
   constructor(
     private componentFactoryResolver: ComponentFactoryResolver,
-    public config: AccordionConfig
+    public config: AccordionConfig,
+    private cd: ChangeDetectorRef
   ) {}
 
   ngAfterViewInit() {
     this.loadComponent(this.childComponentType);
+    this.cd.detectChanges();
   }
 
   loadComponent(componentType: Type<any>) {
