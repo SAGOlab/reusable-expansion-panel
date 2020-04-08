@@ -1,5 +1,5 @@
 <mat-accordion [hideToggle]="config.data.hideToggle" [multi]="config.data.multi">
-  <mat-expansion-panel [disabled]="config.data.isDisabled">
+  <mat-expansion-panel [disabled]="config.data.isDisabled"  (closed)="removeComponent()">
     <mat-expansion-panel-header>
       <mat-panel-title>
         {{config.data.title}}
