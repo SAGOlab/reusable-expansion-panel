@@ -7,7 +7,7 @@ import { AccordionConfig } from './accordion-config';
 @Component({
   selector: 'app-accordion',
   templateUrl: './accordion.component.html',
-  styleUrls: ['./accordion.component.css']
+  styleUrls: ['./accordion.component.scss']
 })
 export class AccordionComponent implements AfterViewInit {
   componentRef: ComponentRef<any>;
